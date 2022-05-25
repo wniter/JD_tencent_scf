@@ -136,9 +136,8 @@ def bark(title, content):
             print('推送失败！')
     print("bark服务启动")
     if BARK=='' and BARK_PUSH=='':
-        print("bark服务的bark_token未设置!!\n取消推送")
-        pass
-#         return
+        print("bark服务的bark_token未设置!!\n取消推送")  
+        return
 
 def serverJ(title, content):
     print("\n")
@@ -365,7 +364,10 @@ def send(title, content):
     :param content:
     :return:
     """
-
+    if BARK_PUSH =='':
+        print('未启用 BARK_PUSH')
+        return
+    
     for i in notify_mode:
         if i == 'bark':
             if BARK or BARK_PUSH:
