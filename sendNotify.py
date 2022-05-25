@@ -364,9 +364,7 @@ def send(title, content):
     :param content:
     :return:
     """
-    if BARK_PUSH =='':
-        print('未启用 BARK_PUSH')
-        return
+
     
     for i in notify_mode:
         if i == 'bark':
