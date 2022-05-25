@@ -137,7 +137,8 @@ def bark(title, content):
     print("bark服务启动")
     if BARK=='' and BARK_PUSH=='':
         print("bark服务的bark_token未设置!!\n取消推送")
-        return
+        pass
+#         return
 
 def serverJ(title, content):
     print("\n")
